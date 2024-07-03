@@ -1,0 +1,133 @@
+// Styles for front and editor.
+.wp-block-biolamina2-slider {
+  --button-color-inactive: transparent;
+  --button-color-active: #021a44;
+
+  // dots
+  --dot-width: 10px;
+  --dot-height: 10px;
+  --dot-h-spacing: 7.5px;
+  --dot-radius: 10px;
+
+  // h-space container
+  --h-continer-spacing: 1.6875vw;
+
+  // set margin bottom to show content below slider
+  margin-bottom: 3vw !important;
+
+  &.dot-style {
+    --dot-width: 10px;
+    --dot-height: 10px;
+    --dot-h-spacing: 7.5px;
+    --dot-radius: 50%;
+  }
+
+  .embla {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+  }
+
+  .embla__viewport {
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .embla__viewport.is-draggable {
+    cursor: move;
+    cursor: grab;
+  }
+
+  .embla__viewport.is-dragging {
+    cursor: grabbing;
+  }
+
+  .embla__container {
+    display: flex;
+    gap: 2.5vw;
+
+    user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .embla__button {
+    outline: 0;
+    cursor: pointer;
+    background-color: transparent;
+    touch-action: manipulation;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 0;
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    fill: var(--button-color-active);
+    padding: 0;
+  }
+
+  .embla__button:disabled {
+    cursor: default;
+    opacity: 0.3;
+  }
+
+  .embla__button__svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .embla__button--prev {
+    left: var(--h-continer-spacing);
+  }
+
+  .embla__button--next {
+    right: var(--h-continer-spacing);
+  }
+
+  .embla__dots {
+    max-width: fit-content;
+    position: absolute;
+
+    display: flex;
+    list-style: none;
+    justify-content: left;
+    align-items: center;
+    gap: 16px;
+
+    bottom: 0;
+    padding: 8px 16px;
+  }
+
+  .embla__dot {
+    background-color: transparent;
+    cursor: pointer;
+    position: relative;
+    padding: 0;
+    outline: 0;
+    border: solid 1px var(--button-color-active);
+    border-radius: var(--dot-radius);
+
+    width: var(--dot-width);
+    height: var(--dot-height);
+
+    display: flex;
+    align-items: center;
+  }
+
+  .embla__dot::after {
+    background-color: var(--button-color-inactive);
+    width: 100%;
+    height: var(--dot-height);
+    border-radius: var(--dot-radius);
+    content: "";
+  }
+
+  .embla__dot.is-selected::after {
+    background-color: var(--button-color-active);
+    opacity: 1;
+  }
+}

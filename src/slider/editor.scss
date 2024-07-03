@@ -1,0 +1,39 @@
+// Styles for editor only.
+.wp-block-biolamina2-slider {
+  outline: dashed 1px #808080;
+
+  &::before {
+    content: "* click here";
+    color: #808080;
+    font-size: smaller;
+    font-style: italic;
+  }
+
+  > .block-editor-inner-blocks {
+    > .block-editor-block-list__layout {
+      position: relative;
+      display: flex;
+      gap: 1rem;
+      padding: 1rem;
+
+      overflow: scroll;
+
+      min-height: 31rem;
+
+      > .block-list-appender {
+        position: relative;
+
+        display: flex;
+        align-items: center;
+        justify-items: center;
+
+        button {
+          width: 40px;
+          height: 40px;
+
+          margin: 50% 40px;
+        }
+      }
+    }
+  }
+}

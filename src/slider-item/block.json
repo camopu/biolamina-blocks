@@ -1,0 +1,24 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "biolamina2/slider-item",
+  "version": "1.0.0",
+  "title": "slider-item",
+  "keywords": ["biolamina2", "slider-item"],
+  "category": "biolamina2",
+  "textdomain": "biolamina2",
+  "icon": "smiley",
+  "description": "slider-item",
+  "supports": {
+    "html": false
+  },
+  "parent": ["slider"],
+  "attributes": {},
+  "styles": [],
+  "example": {
+    "content": "Add block example here"
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

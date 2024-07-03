@@ -1,0 +1,23 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "biolamina2/scroll-to-section",
+  "version": "1.0.0",
+  "title": "Scroll to section",
+  "keywords": ["biolamina2", "scroll To Section"],
+  "category": "biolamina2",
+  "textdomain": "biolamina2",
+  "icon": "smiley",
+  "description": "scroll-to-section",
+  "supports": {
+    "html": false,
+    "anchor": true
+  },
+  "attributes": {},
+  "example": {
+    "content": ""
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

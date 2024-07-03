@@ -1,0 +1,6 @@
+// Styles for front and editor.
+.wp-block-biolamina2-slider-item {
+  /* Default slide covers 100% of the viewport */
+  flex: 0 0 100%;
+  margin-bottom: var(--swiper-item-padding-bottom, 2rem);
+}

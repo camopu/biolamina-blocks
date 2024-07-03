@@ -1,0 +1,32 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "biolamina2/accordion",
+  "version": "1.0.0",
+  "title": "accordion",
+  "keywords": ["biolamina2", "accordion"],
+  "category": "biolamina2",
+  "textdomain": "biolamina2",
+  "icon": "smiley",
+  "description": "accordion",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "isOpen": {
+      "type": "boolean",
+      "default": true
+    },
+    "accordionTitle": {
+      "type": "string",
+      "source": "html",
+      "selector": "summary"
+    }
+  },
+  "example": {
+    "content": "Add block example here"
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

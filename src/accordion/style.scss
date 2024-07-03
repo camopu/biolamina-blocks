@@ -1,0 +1,132 @@
+// Styles for front and editor.
+
+// if details open the summary background color is transparent
+:where(details[open]) {
+  &:hover {
+    summary {
+      background-color: transparent !important;
+    }
+  }
+}
+
+.wp-block-biolamina2-accordion {
+  + & {
+    margin-top: 1rem;
+  }
+
+  box-sizing: border-box;
+  border: 1px solid;
+  border-color: var(--hover-color, #a7a9b4);
+  border-radius: var(--border-radius, 8px);
+  overflow: hidden;
+
+  --accordion-summary-hover: transparent;
+
+  &:focus,
+  &:active,
+  &:hover {
+    --hover-color: #ff652f;
+  }
+
+  &:hover {
+    --accordion-summary-hover: #fff;
+  }
+
+  //   parent
+  details {
+    > *:not(summary) {
+      padding-left: var(--content-padding, 1rem);
+      padding-right: var(--content-padding, 1rem);
+    }
+
+    > :last-child {
+      padding-bottom: var(--content-padding, 1rem);
+    }
+
+    p {
+      font-weight: 300;
+      font-size: var(--font-size--subheading);
+      line-height: 150%;
+      color: #646f8d;
+    }
+
+    h2,
+    h3,
+    h4,
+    p {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    p + p {
+      margin-top: 0.5rem;
+    }
+
+    h4 {
+      margin-top: 1.625rem;
+      font-weight: 500;
+      font-size: var(--font-size--small);
+      line-height: 1.1;
+
+      letter-spacing: 0.32px;
+      text-transform: uppercase;
+
+      color: #1b2b46;
+    }
+
+    //   title
+    summary {
+      padding: var(--content-padding, 1rem);
+      background-color: var(--accordion-summary-hover);
+      cursor: pointer;
+      overflow: hidden;
+      color: var(--hover-color, currentcolor);
+      transition: all 0.3s ease;
+      // font-size: var(--wp--preset--font-size--medium-large);
+      font-size: var(--font-size--heading);
+      font-style: normal;
+      font-weight: 400;
+      line-height: 1.4;
+      letter-spacing: -0.2px;
+      text-transform: capitalize;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      list-style: none;
+
+      &::marker,
+      &::-webkit-details-marker {
+        display: none;
+      }
+
+      &::after {
+        content: "";
+        transition: transform ease-in-out 200ms;
+        display: inline-block;
+
+        background-color: currentcolor;
+
+        mask-image: url("./assets/add.svg");
+        mask-repeat: no-repeat;
+        mask-position: 50% 50%;
+        mask-size: cover;
+
+        aspect-ratio: 1/1;
+
+        height: 1rem;
+        width: 1rem;
+      }
+    }
+
+    // active state
+    &[open] {
+      summary::after {
+        transform: rotate(45deg);
+        height: 1rem;
+        width: 1rem;
+      }
+    }
+  }
+}

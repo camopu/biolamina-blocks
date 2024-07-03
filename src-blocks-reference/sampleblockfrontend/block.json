@@ -1,0 +1,23 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "biolamina2/sampleblock",
+  "version": "1.0.0",
+  "title": "sampleblock",
+  "keywords": ["biolamina2", "sampleblock"],
+  "category": "biolamina2",
+  "textdomain": "biolamina2",
+  "icon": "smiley",
+  "description": "sampleblock",
+  "supports": {
+    "html": false
+  },
+  "attributes": {},
+  "example": {
+    "content": "Add block example here"
+  },
+  "editorScript": "file:./index.js",
+  "viewScript": "file:./view.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

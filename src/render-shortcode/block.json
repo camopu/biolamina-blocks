@@ -1,0 +1,34 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "biolamina2/render-shortcode",
+  "version": "1.0.0",
+  "title": "Render shortcode",
+  "keywords": ["biolamina2", "shortcode"],
+  "category": "biolamina2",
+  "textdomain": "biolamina2",
+  "icon": "smiley",
+  "description": "Render shortcode",
+  "supports": {
+    "html": true
+  },
+  "attributes": {
+    "shortCode": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "styles": [
+    {
+      "name": "default",
+      "label": "Default",
+      "isDefault": true
+    }
+  ],
+  "example": {
+    "content": "Add block example here"
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

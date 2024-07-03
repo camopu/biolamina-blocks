@@ -1,0 +1,138 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "biolamina2/slider",
+  "version": "1.0.0",
+  "title": "slider",
+  "keywords": ["biolamina2", "slider"],
+  "category": "biolamina2",
+  "textdomain": "biolamina2",
+  "icon": "smiley",
+  "description": "slider",
+  "supports": {
+    "html": false,
+    "align": true
+  },
+  "attributes": {
+    "isAutoplay": {
+      "type": "boolean",
+      "default": false
+    },
+    "isShowArrows": {
+      "type": "boolean",
+      "default": false
+    },
+    "isShowDots": {
+      "type": "boolean",
+      "default": true
+    },
+    "isTimeLine": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "styles": [
+    {
+      "name": "default",
+      "label": "Default",
+      "isDefault": true
+    },
+    {
+      "name": "fullwidth",
+      "label": "Fullwidth"
+    },
+    {
+      "name": "inside-column",
+      "label": "Inside column"
+    }
+  ],
+  "example": {
+    "attributes": {
+      "isAutoplay": true,
+      "isShowArrows": false,
+      "isShowDots": true
+    },
+    "innerBlocks": [
+      {
+        "name": "biolamina2/slider-item",
+        "attributes": {},
+        "innerBlocks": [
+          {
+            "name": "core/cover",
+            "attributes": {
+              "url": "/wp-content/uploads/2022/11/slide-img-1-scaled.jpg",
+              "useFeaturedImage": false,
+              "id": 163,
+              "alt": "",
+              "hasParallax": false,
+              "isRepeated": false,
+              "dimRatio": 20,
+              "overlayColor": "secondary",
+              "backgroundType": "image",
+              "focalPoint": {
+                "x": 0.54,
+                "y": 0.44
+              },
+              "isDark": false
+            },
+            "innerBlocks": [
+              {
+                "name": "core/paragraph",
+                "attributes": {
+                  "align": "center",
+                  "content": "Lorem ipsum dolor semit",
+                  "dropCap": false,
+                  "placeholder": "Write title…",
+                  "fontSize": "small"
+                },
+                "innerBlocks": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "biolamina2/slider-item",
+        "attributes": {},
+        "innerBlocks": [
+          {
+            "name": "core/cover",
+            "attributes": {
+              "url": "/wp-content/uploads/2022/11/slide-img-1-scaled.jpg",
+              "useFeaturedImage": false,
+              "id": 163,
+              "alt": "",
+              "hasParallax": false,
+              "isRepeated": false,
+              "dimRatio": 20,
+              "overlayColor": "secondary",
+              "backgroundType": "image",
+              "focalPoint": {
+                "x": 0.54,
+                "y": 0.44
+              },
+              "isDark": false
+            },
+            "innerBlocks": [
+              {
+                "name": "core/paragraph",
+                "attributes": {
+                  "align": "center",
+                  "content": "Lorem ipsum dolor semit",
+                  "dropCap": false,
+                  "placeholder": "Write title…",
+                  "fontSize": "small"
+                },
+                "innerBlocks": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "editorScript": "file:./index.js",
+  "viewScript": "file:./view.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

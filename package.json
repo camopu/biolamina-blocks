@@ -1,0 +1,42 @@
+{
+  "name": "biolamina2-plugin",
+  "version": "1.0.0",
+  "description": "Blocks for biolamina2-theme",
+  "author": "accomplice, pär, sravan",
+  "license": "UNLICENSED",
+  "files": [
+    "**",
+    "!**/src/**",
+    "!**/src-blocks-reference/**",
+    "!**/node_modules/**",
+    "!yarn.lock",
+    "!package-lock.json",
+    "!.cache",
+    "!.parcel-cache"
+  ],
+  "scripts": {
+    "start": "wp-scripts start --webpack-copy-php",
+    "build": "wp-scripts build --webpack-copy-php",
+    "packages-update": "wp-scripts packages-update",
+    "clean": "rimraf build",
+    "prebundle": "yarn clean && yarn build",
+    "bundle": "wp-scripts plugin-zip"
+  },
+  "dependencies": {
+    "@wordpress/base-styles": "^4.16.0",
+    "@wordpress/block-editor": "^11.2.0",
+    "@wordpress/blocks": "^12.2.0",
+    "@wordpress/components": "^23.2.0",
+    "@wordpress/element": "^5.2.0",
+    "@wordpress/hooks": "^3.25.0",
+    "@wordpress/i18n": "^4.25.0",
+    "@wordpress/server-side-render": "^4.2.0",
+    "embla-carousel": "^7.0.9",
+    "embla-carousel-autoplay": "^7.0.9",
+    "lodash.kebabcase": "^4.1.1"
+  },
+  "devDependencies": {
+    "@wordpress/scripts": "^25.2.0",
+    "rimraf": "^4.1.2"
+  }
+}
